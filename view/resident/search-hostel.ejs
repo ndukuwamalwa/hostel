@@ -1,0 +1,56 @@
+<form action="<%=action%>" method="<%=method %>">
+    <div>
+        <h4><%=formTitle %></h4>
+    </div>
+    <% if (errors.type.toString() === "success") { %>
+        <div class="errors success"><%=errors.message%></div>
+    <% } else { %>
+        <div class="errors err"><%=errors.message%></div>
+    <% } %>
+    <fieldset>
+        <label for="hostel">Hostel Number</label>
+        <input type="text" required name="hostel" id="hostel">
+    </fieldset>
+    <fieldset>
+        <label for="year">Year</label>
+        <input type="text" name="year" id="year" required pattern="[0-9]{1,}">
+    </fieldset>
+    <fieldset>
+        <label for="startMonth">Start month</label>
+        <select name="startMonth" id="startMonth">
+            <option value="Jan">January</option>
+            <option value="Feb">February</option>
+            <option value="Mar">March</option>
+            <option value="Apr">April</option>
+            <option value="May">May</option>
+            <option value="Jun">June</option>
+            <option value="Jul">July</option>
+            <option value="Aug">August</option>
+            <option value="Sep">September</option>
+            <option value="Oct">October</option>
+            <option value="Nov">November</option>
+            <option value="Dec">Decemeber</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <label for="endMonth">End month</label>
+        <select name="endMonth" id="endMonth">
+            <option value="Jan">January</option>
+            <option value="Feb">February</option>
+            <option value="Mar">March</option>
+            <option value="Apr">April</option>
+            <option value="May">May</option>
+            <option value="Jun">June</option>
+            <option value="Jul">July</option>
+            <option value="Aug">August</option>
+            <option value="Sep">September</option>
+            <option value="Oct">October</option>
+            <option value="Nov">November</option>
+            <option value="Dec">Decemeber</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <input type="reset" value="reset">
+        <input type="submit" value="submit">
+    </fieldset>
+</form>

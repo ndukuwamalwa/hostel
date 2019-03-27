@@ -1,0 +1,22 @@
+<div id="search-results">
+    <% if (results.length === 0) { %>
+        <div>No results found.</div>
+    <% } else { %>
+        <p>Click on an item for more actions.</p>
+        <% for (let result of results) { %>
+            <article>
+                <div class="visible-results">
+                    <% for (let visible of result.visibles) { %>
+                        <span><span><%=visible.key%></span>: <%=visible.text%></span>
+                    <% } %>
+                    <i class="fa fa-chevron-down"></i>
+                </div>
+                <div class="result-actions">
+                    <% for (let action of result.actions) { %>
+                        <a href="<%=action.href%>"><%=action.text%></a>
+                    <% } %>
+                </div>
+            </article>
+        <% } %>
+    <% } %>
+</div>

@@ -1,0 +1,23 @@
+<% if (user.length === 0) { %>
+    <p>No user found.</p>
+<% } else { %>
+    <table>
+        <caption>User details</caption>
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Email address</td>
+                <td><%=user[0].email %></td>
+            </tr>
+            <tr>
+                <td>Date created</td>
+                <td><%=user[0].created %></td>
+            </tr>
+        </tbody>
+    </table>
+<% } %>

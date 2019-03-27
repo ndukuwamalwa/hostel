@@ -1,0 +1,18 @@
+<form action="<%=action%>" method="<%=method %>">
+    <div>
+        <h4><%=formTitle %></h4>
+    </div>
+    <% if (errors.type.toString() === "success") { %>
+        <div class="errors success"><%=errors.message%></div>
+    <% } else { %>
+        <div class="errors err"><%=errors.message%></div>
+    <% } %>
+    <fieldset>
+        <label for="keyword">Enter text to search</label>
+        <input type="search" required autofocus id="keyword" name="keyword">
+    </fieldset>
+    <fieldset>
+        <input type="reset" value="reset">
+        <input type="submit" value="submit">
+    </fieldset>
+</form>

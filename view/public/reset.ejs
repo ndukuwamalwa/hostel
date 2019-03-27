@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <form action="/password-reset" method="POST" id="login-form">
+        <div>
+            <h3>Password reset</h3>
+        </div>
+        <% if (errors.type.toString() === 'success') { %>
+            <div class="errors success"><%=errors.message%></div>
+        <% } else { %>
+            <div class="errors err"><%=errors.message%></div>
+        <% } %>
+        <fieldset>
+            <label for="username">Email address</label>
+            <input type="email" required autofocus autocomplete="off" name="username" id="username">
+        </fieldset>
+        <fieldset>
+            <a href="/login" id="reset-pass">Back to login</a>
+            <input type="submit" value="reset">
+        </fieldset>
+    </form>
+</body>
+</html>

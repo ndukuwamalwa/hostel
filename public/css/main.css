@@ -1,0 +1,261 @@
+@import '/css/fa/css/font-awesome.min.css';
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --theme-color: rgba(0, 0, 0, .9);
+    --text-color: gold;
+}
+body > header {
+    width: 99.2vw;
+    text-align: center;
+    height: 6.7vh;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+}
+.errors {
+    margin: auto;
+    border: 1px solid #4771fa;
+    padding: 0.5rem;
+    border-radius: 3px;
+    background: #b9c9ff;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.errors:empty {
+    display: none;
+}
+.err {
+    border-color: red;
+    background: rgb(255, 176, 176);
+    color: red;
+}
+.success {
+    border-color: green;
+    background: rgb(34, 155, 44);
+    color: #fff;
+}
+body > nav, body > main {
+    position: absolute;
+    top: 6.8vh;
+    height: 90.3vh;
+}
+body > nav {
+    background-color: var(--theme-color);
+    width: 15vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+body > main {
+    left: 17vw;
+    padding: 10px;
+    width: 79vw;
+    overflow-y: auto;
+    background-color: #fff;
+}
+body > nav > span {
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+body > nav > div {
+    display: flex;
+    flex-direction: column;
+}
+body > nav > div > a {
+    color: green;
+    text-decoration: none;
+    margin: 10px;
+    margin-left: 20px;
+}
+body > nav > div > a > i {
+    color: var(--text-color);
+    width: 30px;
+}
+body > nav > div > a:hover {
+    text-decoration: underline;
+}
+input[type=text], input[type=email],input[type=password],input[type=number],input[type=tel],input[type=search] {
+    border: thin solid #b4b4b4;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+body > main > form {
+    width: 80%;
+    margin: 10px auto;
+}
+fieldset {
+    border-width: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+fieldset > label {
+    margin: 10px 0;
+}
+.required {
+    color: red;
+    font-weight: bold;
+}
+fieldset:last-child {
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+form > div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+form > div:first-child > h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+form > div:first-child > p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+label {
+    opacity: 0.7;
+}
+input[type=reset] {
+    color: #746d6d;
+    background-color: #fff;
+    border: thin solid #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    border-radius: 4px;
+}
+input[type=reset]:hover {
+    color: #fff;
+    background-color: #746d6d;
+}
+
+input[type=submit] {
+    color: green;
+    background-color: #fff;
+    border: thin solid green;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    border-radius: 4px;
+}
+input[type=submit]:hover {
+    color: #fff;
+    background-color: green;
+}
+select {
+    border: thin solid #b4b4b4;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+#search-results {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+#search-results > article {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--theme-color);
+    margin-top: 3px;
+}
+.visible-results {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.visible-results > span {
+    color: #fff;
+    margin: 0 3px;
+    flex: 1 0 auto;
+    font-size: 11px;
+}
+.visible-results > span > span {
+    color: var(--text-color);
+    font-size: 11px;
+}
+.visible-results > i {
+    color: var(--text-color);
+}
+.result-actions {
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px;
+    animation: scaleY 500ms;
+}
+.result-actions > a {
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: gold;
+}
+.result-actions > a:hover {
+    text-decoration: underline;
+}
+@keyframes scaleY {
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    100% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+}
+#logout {
+    position: absolute;
+    right: 2vw;
+    top: 20px;
+    color: #fff;
+}
+table {
+    border-collapse: collapse;
+    margin: 10px auto;
+    min-width: 50%;
+}
+td, th {
+    border: thin solid #b4b4b4;
+    padding: 10px;
+}
+thead > tr {
+    background-color: var(--theme-color);
+    color: var(--text-color);
+}
+#login-form {
+    width: 40vw;
+    margin: 20vh auto;
+    padding: 0;
+    border: thin dotted #b4b4b4;
+}
+#login-form > div:nth-child(1) {
+    height: 10%;
+    background-color: green;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+}
+#login-form > fieldset {
+    padding: 10px;
+}
+#login-form > fieldset > input:not([type=submit]):not([type=reset]) {
+    width: 93%;
+}
+#login-form > fieldset:last-child {
+    width: 96.5%;
+}
+#reset-pass {
+    color: green;
+}

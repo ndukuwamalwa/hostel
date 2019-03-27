@@ -1,0 +1,29 @@
+<form action="<%=action%>" method="<%=method %>">
+    <div>
+        <h4><%=formTitle %></h4>
+        <p>All fields marked <span class="required">*</span> are mandatory</p>
+    </div>
+    <% if (errors.type.toString() === "success") { %>
+        <div class="errors success"><%=errors.message%></div>
+    <% } else { %>
+        <div class="errors err"><%=errors.message%></div>
+    <% } %>
+    <% if (action === '/hostels/update') {%>
+        <fieldset>
+            <label for="hostelNo">Hostel number</label>
+            <input type="text" name="hostelNo" id="hostelNo" value="<%=hostel.hostelNo%>" readonly>
+        </fieldset>
+    <% } %>
+    <fieldset>
+        <label for="title">Title</label>
+        <input type="text" required autocomplete="off" name="title" id="title" value="<%= hostel.title %>">
+    </fieldset>
+    <fieldset>
+        <label for="capacity">Capacity</label>
+        <input type="text" required autocomplete="off" name="capacity" id="capacity" value="<%= hostel.capacity %>">
+    </fieldset>
+    <fieldset>
+        <input type="reset" value="reset">
+        <input type="submit" value="submit">
+    </fieldset>
+</form>

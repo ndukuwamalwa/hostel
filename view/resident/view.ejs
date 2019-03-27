@@ -1,0 +1,39 @@
+<% if (resident.length === 0) { %>
+    <p>No user found.</p>
+<% } else { %>
+    <table>
+        <caption>Resident details</caption>
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Registration number</td>
+                <td><%=resident[0].admNo%></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><%=resident[0].name%></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><%=resident[0].phone%></td>
+            </tr>
+            <tr>
+                <td>Parent's phone</td>
+                <td><%=resident[0].parentPhone%></td>
+            </tr>
+            <tr>
+                <td>National ID</td>
+                <td><%=resident[0].nationalId%></td>
+            </tr>
+            <tr>
+                <td>Date created</td>
+                <td><%=resident[0].created%></td>
+            </tr>
+        </tbody>
+    </table>
+<% } %>

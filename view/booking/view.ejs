@@ -1,0 +1,51 @@
+<% if (booking.length === 0) { %>
+    <p>No booking found.</p>
+<% } else { %>
+    <table>
+        <caption>Booking details</caption>
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Booking number</td>
+                <td><%=booking[0].id%></td>
+            </tr>
+            <tr>
+                <td>Resident number</td>
+                <td><%=booking[0].resident%></td>
+            </tr>
+            <tr>
+                <td>Hostel name</td>
+                <td><%=booking[0].title%></td>
+            </tr>
+            <tr>
+                <td>Room number</td>
+                <td><%=booking[0].room%></td>
+            </tr>
+            <tr>
+                <td>Number of occupants</td>
+                <td><%=booking[0].occupants%></td>
+            </tr>
+            <tr>
+                <td>Amount paid</td>
+                <td>KES. <%=booking[0].paid%></td>
+            </tr>
+            <tr>
+                <td>Full amount</td>
+                <td>KES. <%=booking[0].credit%></td>
+            </tr>
+            <tr>
+                <td>Year</td>
+                <td><%=booking[0].room%></td>
+            </tr>
+            <tr>
+                <td>Period</td>
+                <td><%=booking[0].startMonth%>-<%=booking[0].endMonth%></td>
+            </tr>
+        </tbody>
+    </table>
+<% } %>

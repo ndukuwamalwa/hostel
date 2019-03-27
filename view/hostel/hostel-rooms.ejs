@@ -1,0 +1,27 @@
+<% if (rooms.length === 0) { %>
+    <p>No rooms found.</p>
+<% } else { %>
+    <table>
+        <caption>All rooms</caption>
+        <thead>
+            <tr>
+                <th>Room number</th>
+                <th>Hostel number</th>
+                <th>Hostel name</th>
+                <th>Room capacity</th>
+                <th>Rent cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let room of rooms ) { %>
+                <tr>
+                    <td><%=room.roomNo %></td>
+                    <td><%=room.hostel %></td>
+                    <td><%=room.title %></td>
+                    <td><%=room.capacity %></td>
+                    <td>KES. <%=room.price %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+<% } %>

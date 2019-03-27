@@ -1,0 +1,31 @@
+<% if (hostel.length === 0) { %>
+    <p>No user found.</p>
+<% } else { %>
+    <table>
+        <caption>Hostel details</caption>
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hostel number</td>
+                <td><%=hostel[0].hostelNo%></td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td><%=hostel[0].title%></td>
+            </tr>
+            <tr>
+                <td>Capacity</td>
+                <td><%=hostel[0].capacity%></td>
+            </tr>
+            <tr>
+                <td>Date created</td>
+                <td><%=hostel[0].created%></td>
+            </tr>
+        </tbody>
+    </table>
+<% } %>

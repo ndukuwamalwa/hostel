@@ -1,0 +1,35 @@
+<% if (room.length === 0) { %>
+    <p>No user found.</p>
+<% } else { %>
+    <table>
+        <caption>Room details</caption>
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Room number</td>
+                <td><%=room[0].roomNo%></td>
+            </tr>
+            <tr>
+                <td>Hostel number</td>
+                <td><%=room[0].hostel%></td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td><%=room[0].title%></td>
+            </tr>
+            <tr>
+                <td>Capacity</td>
+                <td><%=room[0].capacity%></td>
+            </tr>
+            <tr>
+                <td>Rent price</td>
+                <td>KES. <%=room[0].price%></td>
+            </tr>
+        </tbody>
+    </table>
+<% } %>
